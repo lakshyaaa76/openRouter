@@ -1,0 +1,20 @@
+{
+  "name": "api-backend",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
+    "db":"*",
+    "@elysiajs/bearer": "^1.4.3",
+    "@google/genai": "^1.46.0",
+    "elysia": "latest",
+    "openai": "^6.32.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
