@@ -167,7 +167,7 @@ export function Dashboard() {
                 {apiKeys.length > 0 && (
                     <div>
                         <div className="flex items-center justify-between mb-4">
-                            <h2 className="text-sm font-semibold">Your API Keys</h2>
+                            <h2 className="text-sm font-semibold text-foreground">Your API Keys</h2>
                             <Button variant="ghost" size="sm" asChild>
                                 <Link to="/api-keys" className="text-xs">
                                     View all
@@ -185,10 +185,10 @@ export function Dashboard() {
                                         <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">Credits Used</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody className="text-foreground">
                                     {apiKeys.slice(0, 5).map((key) => (
                                         <tr key={key.id} className="border-b border-border/30 last:border-0">
-                                            <td className="px-4 py-3 font-medium">{key.name}</td>
+                                            <td className="px-4 py-3 font-medium text-foreground">{key.name}</td>
                                             <td className="px-4 py-3 font-mono text-xs text-muted-foreground">
                                                 {key.apiKey.slice(0, 12)}...{key.apiKey.slice(-4)}
                                             </td>
@@ -208,7 +208,7 @@ export function Dashboard() {
                                                     {key.disabled ? "Disabled" : "Active"}
                                                 </span>
                                             </td>
-                                            <td className="px-4 py-3 text-right tabular-nums">
+                                            <td className="px-4 py-3 text-right tabular-nums text-foreground">
                                                 {(key.credisConsumed ?? 0).toLocaleString()}
                                             </td>
                                         </tr>

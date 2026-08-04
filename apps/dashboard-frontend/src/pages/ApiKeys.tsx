@@ -197,7 +197,7 @@ export function ApiKeys() {
 
                 {/* Keys list */}
                 <div>
-                    <h2 className="text-sm font-semibold mb-4">
+                    <h2 className="text-sm font-semibold mb-4 text-foreground">
                         Your keys
                         {!apiKeysQuery.isLoading && (
                             <span className="text-muted-foreground font-normal ml-2">
@@ -235,10 +235,10 @@ export function ApiKeys() {
                                         <th className="text-right px-4 py-3 text-xs font-medium text-muted-foreground">Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody className="text-foreground">
                                     {apiKeys.map((key) => (
                                         <tr key={key.id} className="border-b border-border/30 last:border-0 group">
-                                            <td className="px-4 py-3 font-medium">{key.name}</td>
+                                            <td className="px-4 py-3 font-medium text-foreground">{key.name}</td>
                                             <td className="px-4 py-3">
                                                 <div className="flex items-center gap-1.5">
                                                     <code className="font-mono text-xs text-muted-foreground">
@@ -288,7 +288,7 @@ export function ApiKeys() {
                                                     {key.disabled ? "Disabled" : "Active"}
                                                 </span>
                                             </td>
-                                            <td className="px-4 py-3 text-right tabular-nums">
+                                            <td className="px-4 py-3 text-right tabular-nums text-foreground">
                                                 {(key.credisConsumed ?? 0).toLocaleString()}
                                             </td>
                                             <td className="px-4 py-3">

@@ -19,6 +19,7 @@ const app = new Elysia()
       deleted: false
     },
     select: {
+      id: true,
       user: true
     }
   })
@@ -117,6 +118,19 @@ const app = new Elysia()
     }
   })
   console.log(res2)
+
+  // Log the conversation so Analytics data is populated
+  await prisma.conversation.create({
+    data: {
+      userId: apiKeyDb.user.id,
+      apiKeyId: apiKeyDb.id,
+      modelProviderMappingId: successfulProvider.id,
+      input: JSON.stringify(body.messages),
+      output: response.completions.choices[0]?.message.content ?? "",
+      inputTokenCount: response.inputTokensConsumed,
+      outputTokenCount: response.outputTokensConsumed,
+    }
+  });
 
   return response;
 }, {

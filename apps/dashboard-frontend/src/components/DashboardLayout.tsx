@@ -6,12 +6,14 @@ import {
     Coins,
     Zap,
     LogOut,
+    BarChart2,
 } from "lucide-react";
 
 const navItems = [
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { label: "API Keys", href: "/api-keys", icon: Key },
     { label: "Credits", href: "/credits", icon: Coins },
+    { label: "Analytics", href: "/analytics", icon: BarChart2 },
 ];
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {

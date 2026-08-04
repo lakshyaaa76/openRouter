@@ -6,6 +6,7 @@ import { Signup } from "./pages/Signup";
 import { Dashboard } from "./pages/Dashboard";
 import { Credits } from "./pages/Credits";
 import { ApiKeys } from "./pages/ApiKeys";
+import { Analytics } from "./pages/Analytics";
 import { Landing } from "./pages/Landing";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ElysiaClientContextProvider } from "./providers/Eden";
@@ -32,6 +33,7 @@ export function App() {
               <Route path={"/dashboard"} element={<Dashboard />} /> 
               <Route path={"/credits"} element={<Credits />} /> 
               <Route path={"/api-keys"} element={<ApiKeys />} /> 
+              <Route path={"/analytics"} element={<Analytics />} /> 
             </Routes>
           </BrowserRouter>
       </ElysiaClientContextProvider>
